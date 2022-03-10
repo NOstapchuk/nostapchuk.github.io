@@ -3,16 +3,15 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <script src="../mdsrv/webapp/js/ngl.js"></script>
+  Does this work?
+  <script src="https://unpkg.com/ngl@0.10.4/dist/ngl.js"></script>
   <script>
-    document.addEventListener( "DOMContentLoaded", function(){
-	stage = new NGL.Stage( "viewport" );
-	stage.loadFile( "rcsb://5xbl", { asTrajectory: true } )
-	.then(function( o){
-		o.addRepresentation( "cartoon", { sele: "protein" } );
-		o.addTrajectory();
-		o.centerView();
-	} );
+    document.addEventListener("DOMContentLoaded", function () {
+      var stage = new NGL.Stage("viewport");
+      panel.setName( "A simple example" );
+      stage.setParameters( { backgroundColor: "white", hoverTimeout: -1 } );
+      stage.loadFile("rcsb://5xbl", {defaultRepresentation: true});
+    });
 </script>
 <div id="viewport" style="width:800px; height:600px;"></div>
 </body>
