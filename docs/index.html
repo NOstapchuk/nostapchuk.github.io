@@ -3,13 +3,17 @@
   <meta charset="utf-8">
 </head>
 <body>
-  Does this work?
   <script src="https://unpkg.com/ngl@0.10.4/dist/ngl.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var stage = new NGL.Stage("viewport");
       stage.setParameters( { backgroundColor: "white", hoverTimeout: -1 } );
       stage.loadFile("rcsb://5xbl", {defaultRepresentation: true});
+      .then(function( o){
+		o.addRepresentation( "cartoon", { sele: "protein" } );
+		o.addTrajectory();
+		o.centerView();
+
     });
 </script>
 <div id="viewport" style="width:800px; height:600px;"></div>
