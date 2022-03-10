@@ -8,7 +8,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       var stage = new NGL.Stage("viewport");
       stage.setParameters( { backgroundColor: "white", hoverTimeout: -1 } );
-      stage.loadFile("rcsb://5xbl", {defaultRepresentation: true});
+      stage.loadFile("rcsb://5xbl");
       .then(function( o){
 		o.addRepresentation( "cartoon", { sele: "protein" } );
 		o.addTrajectory();
