@@ -9,7 +9,7 @@
       var stage = new NGL.Stage("viewport");
       stage.loadFile("rcsb://1crn", {defaultRepresentation: true});
     });
-  </script>
-  <div id="viewport" style="width:400px; height:300px;"></div>
-  </body>
-  </html>
+</script>
+<div id="viewport" style="width:400px; height:300px;"></div>
+</body>
+</html>
