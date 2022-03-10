@@ -8,6 +8,8 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var stage = new NGL.Stage("viewport");
+      panel.setName( "A simple example" );
+      stage.setParameters( { backgroundColor: "white", hoverTimeout: -1 } );
       stage.loadFile("rcsb://5xbl", {defaultRepresentation: true});
     });
 </script>
